@@ -1,0 +1,6 @@
+{
+    "database":"weatherdb", 
+    "user":"postgres", 
+    "password":"admin",
+    "port": "5432"
+}
