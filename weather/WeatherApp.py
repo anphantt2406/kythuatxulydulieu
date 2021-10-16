@@ -28,11 +28,22 @@ if __name__ == "__main__":
     ids = apiConfig.get('ids')
     token = apiConfig.get('APPID')
 
-    # schedule.every().days.at("09:00:00").do(processData)
-    # schedule.every().days.at("11:00:00").do(processData)
-    # schedule.every().days.at("17:00:00").do(processData)
+    schedule.every().days.at("09:30:00").do(processData)
+    schedule.every().days.at("10:00:00").do(processData)
+    schedule.every().days.at("10:30:00").do(processData)
+    schedule.every().days.at("11:00:00").do(processData)
+    schedule.every().days.at("11:30:00").do(processData)
+    schedule.every().days.at("13:30:00").do(processData)
+    schedule.every().days.at("14:00:00").do(processData)
+    schedule.every().days.at("14:30:00").do(processData)
+    schedule.every().days.at("15:00:00").do(processData)
+    schedule.every().days.at("15:30:00").do(processData)
+    schedule.every().days.at("16:00:00").do(processData)
+    schedule.every().days.at("16:30:00").do(processData)
+    schedule.every().days.at("17:00:00").do(processData)
+    schedule.every().days.at("17:30:00").do(processData)
 
-    schedule.every().days.at("17:31:00").do(processData)
+    # schedule.every().days.at("17:31:00").do(processData)
 
     # schedule.every(5).seconds.do(processData)
     is_interrupted = False
@@ -41,7 +52,7 @@ if __name__ == "__main__":
         # do stuff here 
         print ("processing...")
         schedule.run_pending()
-        time.sleep(60)
+        time.sleep(1)
         if is_interrupted:
             print ("Exiting..")
             # do clean up
